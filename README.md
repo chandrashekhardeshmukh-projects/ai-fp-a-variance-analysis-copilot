@@ -1,82 +1,97 @@
-# AI FP&A Variance Analysis Copilot
+# 📊 AI-Powered FP&A Variance Analysis Copilot
 
-An AI-enabled FP&A analytics application designed to automate P&L variance analysis, revenue driver decomposition and management commentary.
+> An interactive FP&A analytics application designed to automate financial performance analysis, variance investigation, revenue driver decomposition, materiality screening, departmental drill-downs, and management commentary.
 
-## Overview
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red)
+![Pandas](https://img.shields.io/badge/Data-Pandas-150458)
+![Plotly](https://img.shields.io/badge/Visualization-Plotly-3F4F75)
+![FP&A](https://img.shields.io/badge/Domain-FP%26A-green)
 
-The AI FP&A Variance Analysis Copilot helps finance teams analyze financial performance by comparing actual results against budget, forecast and prior-year performance.
+---
 
-The application combines deterministic financial calculations with an optional AI commentary layer to convert calculated financial insights into concise management-ready explanations.
+## 🚀 Project Overview
 
-> **Note:** This project uses illustrative/demo data and is intended for portfolio and educational purposes.
+The **AI-Powered FP&A Variance Analysis Copilot** is a finance analytics application built to simulate how an FP&A team can move from raw financial data to management-ready insights.
 
-## Key Features
+The application brings several recurring FP&A activities into a single analytical workflow:
 
-### 📊 P&L Variance Analysis
+**Financial Data → P&L Analysis → Variance Analysis → Driver Decomposition → Materiality Screening → Department Drill-down → Management Commentary → Interactive P&L Queries**
 
-- Actual vs Budget analysis
-- Actual vs Forecast analysis
-- Actual vs Prior Year analysis
-- Absolute variance
-- Variance percentage
-- Favorable / Unfavorable classification
-- EBITDA and margin analysis
+Instead of manually reviewing multiple spreadsheets and calculating individual variances, the application performs the calculations programmatically and presents the results through an interactive dashboard.
 
-### 🎯 Revenue Price / Volume / Mix Analysis
+The project uses **illustrative/demo financial data** and is intended for educational and portfolio purposes.
 
-The application decomposes revenue movements into:
+---
 
-- Price impact
-- Volume impact
-- Mix impact
+# 🎯 Business Problem
 
-The analysis includes reconciliation checks to ensure the driver impacts explain the overall revenue movement.
+FP&A teams regularly need to answer questions such as:
 
-### 🏢 Department Analysis
+- How did actual revenue perform against budget?
+- Why is EBITDA below or above plan?
+- Which P&L lines are driving the variance?
+- Is the revenue variance caused by price, volume, or product mix?
+- Which departments are responsible for the largest deviations?
+- Which variances are financially material?
+- What are the largest favorable and unfavorable drivers?
+- How should the financial results be communicated to management?
 
-Analyze financial performance across business departments and identify:
+Traditional spreadsheet-based analysis can require repeated manual calculations, filtering, reconciliation, and preparation of management commentary.
 
-- Revenue performance
-- EBITDA performance
-- EBITDA margin
-- Major favorable variances
-- Major unfavorable variances
+This project demonstrates how those activities can be brought together into a single analytical application.
 
-### 🚨 Materiality Analysis
+---
 
-Users can define:
+# 💡 Core Capabilities
 
-- Absolute variance threshold
-- Percentage variance threshold
+## 1. Executive Performance Dashboard
 
-The application automatically identifies material financial variances requiring management attention.
+Provides a high-level management view of financial performance.
 
-### 🌉 EBITDA Variance Bridge
+Key metrics include:
 
-A waterfall-style bridge explains the movement from budget EBITDA to actual EBITDA through major revenue and cost drivers.
+- Total Revenue
+- Gross Profit
+- EBITDA
+- EBITDA Margin
+- Revenue vs Budget
+- Revenue vs Forecast
+- Revenue vs Prior Year
+- Operating Cost vs Budget
+- EBITDA variance bridge
+- Departmental EBITDA comparison
 
-### 🤖 AI Management Commentary
+The dashboard is designed to answer:
 
-The optional AI layer converts calculated financial outputs into management-ready commentary.
+> **"What happened to overall financial performance?"**
 
-The AI is provided with structured financial results rather than raw unrestricted financial data.
+---
 
-The design separates:
+# 📑 2. P&L Variance Analysis
 
-- Financial calculations
-- Financial interpretation
-- AI-generated commentary
+The application generates a structured P&L comparison between:
 
-If an AI API is unavailable, the application continues operating using deterministic FP&A commentary.
+- Budget
+- Actual
+- Variance
+- Variance %
+- Favorability
 
-### 💬 Ask the P&L
+The analysis includes major financial line items such as:
 
-Users can ask questions such as:
+- Gross Revenue
+- Cost of Goods Sold
+- Gross Profit
+- Marketing Expense
+- Employee Expense
+- Technology Expense
+- Other Operating Expenses
+- EBITDA
 
-- Why is EBITDA below budget?
-- Which department has the largest unfavorable variance?
-- What are the major revenue drivers?
-- Which costs are above budget?
-- Summarize the current financial performance.
+### Variance calculation
 
-## Technology Stack
+For a standard financial metric:
+
+```text
+Variance = Actual - Budget
